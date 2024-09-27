@@ -5,17 +5,120 @@
 		<meta
 			name="viewport"
 			content="width=device-width, initial-scale=1.0" />
-
 		<link
 			rel="icon"
 			type="image/png"
 			sizes="32x32"
 			href="./assets/images/favicon-32x32.png" />
-
+		<link
+			rel="preconnect"
+			href="https://fonts.googleapis.com" />
+		<link
+			rel="preconnect"
+			href="https://fonts.gstatic.com"
+			crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+			rel="stylesheet" />
 		<title>Frontend Mentor | Password generator app</title>
 	</head>
 	<body>
-		Password Generator P4$5W0rD! Character Length Include Uppercase Letters
-		Include Lowercase Letters Include Numbers Include Symbols Strength Generate
+		<main>
+			<div class="wrapper">
+				<h1 class="title">Password Generator</h1>
+				<div class="container">
+					<div class="passwordContainer">
+						<label
+							for="password"
+							hidden></label>
+						<input
+							class="password__input"
+							type="text"
+							name="password"
+							id="password"
+							placeholder="P4$5W0rD!" />
+						<div class="imageContainer">
+							<img
+								class="passwordImg"
+								src="./assets/images/icon-copy.svg"
+								alt="paper icon" />
+						</div>
+					</div>
+
+					<div class="selectionContainer">
+						<div class="slider">
+							<div class="characterContainer">
+								<p class="character">Character Length</p>
+								<p class="value">Value:</p>
+							</div>
+							<div class="sliderContainer">
+								<input
+									type="range"
+									name="slider"
+									id="slider"
+									value="10"
+									min="1"
+									max="18" />
+							</div>
+						</div>
+						<div class="checkboxContainer">
+							<div class="uppercaseContainer">
+								<input
+									type="checkbox"
+									name="uppercase"
+									id="uppercase" />
+								<label for="uppercase">Include Uppercase Letters</label>
+							</div>
+							<div class="lowercaseContainer">
+								<input
+									type="checkbox"
+									name="lowercase"
+									id="lowercase" />
+								<label for="lowercase">Include Lowercase Letters </label>
+							</div>
+							<div class="numbersContainer">
+								<input
+									type="checkbox"
+									name="numbers"
+									id="numbers" />
+								<label for=""> Include Numbers </label>
+							</div>
+							<div class="symbolContainer">
+								<input
+									type="checkbox"
+									name="symbol"
+									id="symbol" />
+								<label for="symbol">Include Symbols Strength </label>
+							</div>
+						</div>
+						<div class="strengthContainer">
+							<div class="strengthTitleContainer">
+								<p class="strengthTitle">Strength</p>
+							</div>
+							<div class="strengthTextContainer">
+								<p class="strengthText">Medium</p>
+							</div>
+							<div class="strengthMeterContainer">
+								<meter
+									value="3"
+									min="0"
+									max="4"></meter>
+							</div>
+						</div>
+						<div class="generateContainer">
+							<div
+								id="button"
+								class="button">
+								Generate
+							</div>
+							<img
+								class="arrowImg"
+								src="./assets/images/icon-arrow-right.svg"
+								alt="arrow icon" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
 	</body>
 </html>
