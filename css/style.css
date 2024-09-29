@@ -1,0 +1,157 @@
+:root {
+  --color-neonGreen: #A4FFAF;
+  --color-red: #F64A4A;
+  --color-orange: #FB7C58;
+  --color-yellow: #F8CD65;
+  --color-white: #E6E5EA;
+  --color-grey: #817D92;
+  --color-darkGrey: #24232C;
+  --color-veryDarkGrey: #18171F;
+}
+
+body {
+  background-color: #08070B;
+  color: var(--color-white);
+  font-family: "JetBrains Mono", monospace;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100dvh;
+}
+
+.wrapper {
+  width: min(100% - 32px, 1110px);
+  margin-inline: auto;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.title {
+  color: var(--color-grey);
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 24px;
+}
+
+.passwordContainer {
+  background-color: var(--color-darkGrey);
+  padding: 16px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+}
+
+.password__input {
+  border: none;
+  background-color: var(--color-darkGrey);
+  color: var(--color-white);
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.password__input:focus {
+  outline: none;
+}
+
+.selectionContainer {
+  background-color: var(--color-darkGrey);
+  padding: 16px;
+}
+
+.characterContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.character {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.value {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.sliderContainer {
+  width: 100%;
+  padding-bottom: 24px;
+}
+
+.slide {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 8px;
+  background: var(--color-veryDarkGrey);
+  outline: none;
+  opacity: 0.9;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slide::-moz-range-progress {
+  background-color: var(--color-neonGreen);
+  height: 8px;
+}
+
+.slide::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--color-white);
+  cursor: pointer;
+}
+
+.checkboxContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-bottom: 24px;
+}
+
+.uppercaseContainer,
+.lowercaseContainer,
+.numberContainer,
+.symbolContainer {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+input[type="checkbox"] {
+  cursor: pointer;
+}
+
+.strengthContainer {
+  background-color: var(--color-veryDarkGrey);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 16px;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.generateContainer {
+  background-color: var(--color-neonGreen);
+  color: var(--color-darkGrey);
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  cursor: pointer;
+}
+
+.button {
+  margin-right: 15px;
+}
