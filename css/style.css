@@ -20,29 +20,29 @@ body {
 }
 
 .wrapper {
-  width: min(100% - 32px, 1110px);
+  width: min(100% - 2rem, 33.75rem);
   margin-inline: auto;
 }
 
 .container {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 1.5rem;
 }
 
 .title {
   color: var(--color-grey);
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: bold;
   text-align: center;
-  padding-bottom: 24px;
+  padding-bottom: 1.5rem;
 }
 
 .passwordContainer {
   background-color: var(--color-darkGrey);
-  padding: 16px;
+  padding: 1rem;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   cursor: pointer;
 }
@@ -51,9 +51,10 @@ body {
   border: none;
   background-color: var(--color-darkGrey);
   color: var(--color-white);
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: bold;
-  cursor: pointer;
+  width: 80%;
+  text-align: left;
 }
 
 .password__input:focus {
@@ -62,7 +63,7 @@ body {
 
 .selectionContainer {
   background-color: var(--color-darkGrey);
-  padding: 16px;
+  padding: 1rem;
 }
 
 .characterContainer {
@@ -72,24 +73,24 @@ body {
 }
 
 .character {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: bold;
 }
 
 .value {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: bold;
 }
 
 .sliderContainer {
   width: 100%;
-  padding-bottom: 24px;
+  padding-bottom: 1.5rem;
 }
 
 .slide {
   -webkit-appearance: none;
   width: 100%;
-  height: 8px;
+  height: 0.5rem;
   background: var(--color-veryDarkGrey);
   outline: none;
   opacity: 0.9;
@@ -99,12 +100,12 @@ body {
 
 .slide::-moz-range-progress {
   background-color: var(--color-neonGreen);
-  height: 8px;
+  height: 0.5rem;
 }
 
 .slide::-moz-range-thumb {
-  width: 24px;
-  height: 24px;
+  width: 1.5rem;
+  height: 1.5rem;
   border-radius: 50%;
   background: var(--color-white);
   cursor: pointer;
@@ -113,19 +114,19 @@ body {
 .checkboxContainer {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  padding-bottom: 24px;
+  gap: 1rem;
+  padding-bottom: 1.5rem;
 }
 
 .uppercaseContainer,
 .lowercaseContainer,
 .numbersContainer,
 .symbolContainer {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: bold;
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 1rem;
 }
 
 input[type="checkbox"] {
@@ -133,9 +134,9 @@ input[type="checkbox"] {
   -webkit-appearance: none;
   appearance: none;
   background-color: var(--color-darkGrey);
-  width: 20px;
-  height: 20px;
-  border: 1px solid var(--color-white);
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 0.063rem solid var(--color-white);
 }
 
 input[type="checkbox"]:checked {
@@ -152,30 +153,36 @@ input[type="checkbox"]:checked {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  padding: 16px;
+  padding: 1rem;
   text-transform: uppercase;
-  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
 }
 
 .generateContainer {
   background-color: var(--color-neonGreen);
   color: var(--color-darkGrey);
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: bold;
   text-transform: uppercase;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 16px;
+  padding: 1rem;
   cursor: pointer;
 }
 
 .generateContainer:hover {
   background-color: var(--color-darkGrey);
-  border: 2px solid var(--color-neonGreen);
+  border: 0.125rem solid var(--color-neonGreen);
   color: var(--color-neonGreen);
 }
 
 .button {
-  margin-right: 15px;
+  margin-right: 0.938rem;
+}
+
+@media (min-width: 30.063em) {
+  .strengthContainer {
+    justify-content: space-between;
+  }
 }
