@@ -119,14 +119,32 @@ body {
 
 .uppercaseContainer,
 .lowercaseContainer,
-.numberContainer,
+.numbersContainer,
 .symbolContainer {
   font-size: 16px;
   font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 
 input[type="checkbox"] {
   cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: var(--color-darkGrey);
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--color-white);
+}
+
+input[type="checkbox"]:checked {
+  background-color: var(--color-neonGreen);
+  border: none;
+  background-image: url("../assets/images/icon-check.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .strengthContainer {
@@ -150,6 +168,12 @@ input[type="checkbox"] {
   align-items: center;
   padding: 16px;
   cursor: pointer;
+}
+
+.generateContainer:hover {
+  background-color: var(--color-darkGrey);
+  border: 2px solid var(--color-neonGreen);
+  color: var(--color-neonGreen);
 }
 
 .button {
