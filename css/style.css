@@ -181,6 +181,21 @@ input[type="checkbox"]:checked {
   margin-right: 0.938rem;
 }
 
+.weak {
+  background: var(--color-orange);
+  border-radius: 0.625rem;
+}
+
+.medium {
+  background: var(--color-yellow);
+  border-radius: 0.625rem;
+}
+
+.strong {
+  background: var(--color-neonGreen);
+  border-radius: 0.625rem;
+}
+
 @media (min-width: 30.063em) {
   .strengthContainer {
     justify-content: space-between;
