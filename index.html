@@ -57,7 +57,9 @@
 						<div class="slider">
 							<div class="characterContainer">
 								<p class="character">Character Length</p>
-								<p class="value">Value:</p>
+								<p
+									class="value"
+									id="slideNumber"></p>
 							</div>
 							<div class="sliderContainer">
 								<input
@@ -66,7 +68,7 @@
 									name="slider"
 									id="slider"
 									value="0"
-									min="1"
+									min="0"
 									max="18" />
 							</div>
 						</div>
@@ -105,18 +107,25 @@
 								<p class="strengthTitle">Strength</p>
 							</div>
 							<div class="strengthTextContainer">
-								<p class="strengthText">Medium</p>
+								<p
+									class="strengthText"
+									id="strength">
+									Medium
+								</p>
 							</div>
 							<div class="strengthMeterContainer">
 								<meter
+									id="meter"
 									value="3"
 									min="0"
 									max="4"></meter>
 							</div>
 						</div>
-						<div class="generateContainer">
+						<div
+							class="generateContainer"
+							id="button">
 							<div
-								id="button"
+								id="generate"
 								class="button">
 								Generate
 							</div>
