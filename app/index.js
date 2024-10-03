@@ -69,20 +69,25 @@ const generatePassword = () => {
 
 	existingPasswords.push(newPassword);
 	passwordText.value = newPassword;
-	if (passwordText.value.length < 8) {
+	if (password.length < 8) {
 		meter.value = 1;
 		strengthText.innerText = "Weak";
 		meter.classList.add("weak");
 	}
-	if (passwordText.value.length >= 8 && passwordText.value.length <= 12) {
+	if (password.length >= 8 && password.length <= 12) {
 		meter.value = 3;
 		strengthText.innerText = "Medium";
 		meter.classList.add("medium");
 	}
-	if (passwordText.value.length >= 12) {
+	if (password.length >= 12) {
 		meter.value = 4;
 		strengthText.innerText = "Strong";
 		meter.classList.add("strong");
+	}
+	if (passwordText.value === "Checkbox to continue") {
+		meter.value = 0;
+		strengthText.innerText = "";
+		meter.classList.remove("weak");
 	}
 };
 
