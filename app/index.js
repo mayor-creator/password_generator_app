@@ -8,6 +8,8 @@ const symbol = document.getElementById("symbol");
 const strengthText = document.getElementById("strength");
 const meter = document.getElementById("meter");
 const button = document.getElementById("button");
+const copyButton = document.getElementById("copy");
+const copyText = document.getElementById("copiedText");
 
 const getCharacterLength = () => {
 	slideNumber.innerText = range.value;
@@ -91,4 +93,19 @@ const generatePassword = () => {
 	}
 };
 
+const displayCopiedText = () => {
+	copyText.style.display = "block";
+};
+
+const copyPassword = async () => {
+	const copiedPassword = passwordText.value;
+	try {
+		await navigator.clipboard.writeText(copiedPassword);
+		displayCopiedText();
+	} catch (error) {
+		console.log(error);
+	}
+};
+
 button.addEventListener("click", generatePassword);
+copyButton.addEventListener("click", copyPassword);
