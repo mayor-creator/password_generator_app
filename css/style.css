@@ -61,6 +61,18 @@ body {
   outline: none;
 }
 
+.copy {
+  color: var(--color-neonGreen);
+  display: none;
+  font-size: 1.125rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.imageContainer {
+  padding-left: 0.313rem;
+}
+
 .selectionContainer {
   background-color: var(--color-darkGrey);
   padding: 1rem;
