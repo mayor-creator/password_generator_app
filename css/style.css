@@ -101,6 +101,7 @@ body {
 
 .slide {
   -webkit-appearance: none;
+  appearance: none;
   width: 100%;
   height: 0.5rem;
   background: var(--color-veryDarkGrey);
@@ -110,17 +111,35 @@ body {
   transition: opacity .2s;
 }
 
-.slide::-moz-range-progress {
-  background-color: var(--color-neonGreen);
-  height: 0.5rem;
-}
-
 .slide::-moz-range-thumb {
   width: 1.5rem;
   height: 1.5rem;
   border-radius: 50%;
   background: var(--color-white);
   cursor: pointer;
+}
+
+.slide::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background: var(--color-white);
+  cursor: pointer;
+}
+
+.slide::-ms-thumb {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background: var(--color-white);
+  cursor: pointer;
+}
+
+.slide::-moz-range-progress {
+  background-color: var(--color-neonGreen);
+  height: 0.5rem;
 }
 
 .checkboxContainer {
