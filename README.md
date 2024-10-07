@@ -35,8 +35,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Password Generator Solution URL](https://www.frontendmentor.io/solutions/password-generator-app-zw2AlZIDH0)
+- Live Site URL: [Password Generator Live Site](https://mayor-creator.github.io/password_generator_app/)
 
 ## My process
 
