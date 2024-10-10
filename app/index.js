@@ -21,8 +21,8 @@ const getCharacterLength = () => {
 
 getCharacterLength();
 
-let password = "";
 const getPassword = (characterLength) => {
+	let password = "";
 	const upperLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 	const lowerLetters = "abcdefghijklmnopqrstuvwxyz".split("");
 	const numbers = "0123456789".split("");
@@ -63,25 +63,18 @@ const existingPasswords = [];
 const generatePassword = () => {
 	passwordText.value = "";
 	const characterLength = Number(slideNumber.innerText);
-	let newPassword;
-
-	do {
-		newPassword = getPassword(characterLength);
-	} while (existingPasswords.includes(newPassword));
-
-	existingPasswords.push(newPassword);
+	let newPassword = getPassword(characterLength);
 	passwordText.value = newPassword;
-	if (password.length < 8) {
+
+	if (newPassword.length < 8) {
 		meter.value = 1;
 		strengthText.innerText = "Weak";
 		meter.classList.add("weak");
-	}
-	if (password.length >= 8 && password.length <= 12) {
+	} else if (newPassword.length >= 8 && newPassword.length <= 12) {
 		meter.value = 3;
 		strengthText.innerText = "Medium";
 		meter.classList.add("medium");
-	}
-	if (password.length >= 12) {
+	} else {
 		meter.value = 4;
 		strengthText.innerText = "Strong";
 		meter.classList.add("strong");
